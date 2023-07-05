@@ -19,13 +19,16 @@ Before running the project, ensure that you have the following installed:
 4. Run the application: `mvn spring-boot:ru`
 
 ## API Endpoints
-- **GET /measurements/** - Get all measurements.
-- **GET /sensors/{id}** - Get sensor by id.
-- **GET /measurements/{id}** - Get measurement by id.
-- **GET /sensors/{id}/measurements** - Get all measurements for sensor by sensor id.
-- **POST /sensors/** - Add a new sensor.
-- **POST /measurements/** - Add a new measurement.
+### Sensors
 - **GET /sensors/** - Get all sensors.
+- **GET /sensors/{id}** - Get sensor by id.
+- **POST /sensors/** - Add a new sensor.
+- **GET /sensors/{id}/measurements** - Get all measurements for sensor by sensor id.
+
+### Measurements
+- **GET /measurements/** - Get all measurements.
+- **GET /measurements/{id}** - Get measurement by id.
+- **POST /measurements/** - Add a new measurement.
 - **GET /measurements/rainyDaysCount/** - Get count of rainy days.
 
 
