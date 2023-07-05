@@ -1,0 +1,15 @@
+CREATE DATABASE REST_API_DB;
+
+USE REST_API_DB;
+	CREATE TABLE sensor (
+	id int AUTO_INCREMENT PRIMARY KEY,
+	name varchar(30) NOT NULL
+);
+
+CREATE TABLE measurement(
+	id int AUTO_INCREMENT PRIMARY KEY,
+	sensor_id int NOT NULL REFERENCES sensor(id),
+	value double NOT NULL,
+	raining boolean NOT NULL,
+	created_at timestamp NOT NULL
+);
