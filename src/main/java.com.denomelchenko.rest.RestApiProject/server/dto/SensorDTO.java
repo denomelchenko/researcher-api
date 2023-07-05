@@ -1,4 +1,4 @@
-package com.denomelchenko.rest.RestApiProject.dto;
+package server.dto;
 
 public class SensorDTO {
     private String name;

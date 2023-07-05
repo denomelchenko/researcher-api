@@ -1,4 +1,4 @@
-package com.denomelchenko.rest.RestApiProject;
+package server;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;

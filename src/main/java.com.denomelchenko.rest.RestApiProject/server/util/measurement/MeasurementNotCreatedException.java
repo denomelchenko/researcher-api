@@ -1,4 +1,4 @@
-package com.denomelchenko.rest.RestApiProject.util.measurement;
+package server.util.measurement;
 
 public class MeasurementNotCreatedException extends RuntimeException {
     public MeasurementNotCreatedException(String msg) {

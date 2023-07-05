@@ -1,4 +1,4 @@
-package com.denomelchenko.rest.RestApiProject.models;
+package server.models;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;

@@ -1,6 +1,5 @@
-package com.denomelchenko.rest.RestApiProject.dto;
+package server.dto;
 
-import com.denomelchenko.rest.RestApiProject.models.Sensor;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 

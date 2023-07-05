@@ -1,6 +1,6 @@
-package com.denomelchenko.rest.RestApiProject.repositories;
+package server.repositories;
 
-import com.denomelchenko.rest.RestApiProject.models.Sensor;
+import server.models.Sensor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

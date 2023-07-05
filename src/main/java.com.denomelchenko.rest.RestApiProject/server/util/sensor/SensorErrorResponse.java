@@ -1,10 +1,10 @@
-package com.denomelchenko.rest.RestApiProject.util.measurement;
+package server.util.sensor;
 
-public class MeasurementErrorResponse {
+public class SensorErrorResponse {
     private String message;
     private long timestamp;
 
-    public MeasurementErrorResponse(String message, long timestamp) {
+    public SensorErrorResponse(String message, long timestamp) {
         this.message = message;
         this.timestamp = timestamp;
     }

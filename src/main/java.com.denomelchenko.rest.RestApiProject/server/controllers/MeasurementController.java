@@ -1,15 +1,14 @@
-package com.denomelchenko.rest.RestApiProject.controllers;
+package server.controllers;
 
-import com.denomelchenko.rest.RestApiProject.dto.MeasurementDTO;
-import com.denomelchenko.rest.RestApiProject.models.Measurement;
-import com.denomelchenko.rest.RestApiProject.models.Sensor;
-import com.denomelchenko.rest.RestApiProject.services.MeasurementService;
-import com.denomelchenko.rest.RestApiProject.services.SensorService;
-import com.denomelchenko.rest.RestApiProject.util.measurement.MeasurementErrorResponse;
-import com.denomelchenko.rest.RestApiProject.util.measurement.MeasurementNotCreatedException;
-import com.denomelchenko.rest.RestApiProject.util.measurement.MeasurementNotFoundException;
-import com.denomelchenko.rest.RestApiProject.util.measurement.MeasurementValidator;
-import com.denomelchenko.rest.RestApiProject.util.sensor.SensorNotFoundException;
+import server.dto.MeasurementDTO;
+import server.models.Measurement;
+import server.services.MeasurementService;
+import server.services.SensorService;
+import server.util.measurement.MeasurementErrorResponse;
+import server.util.measurement.MeasurementNotCreatedException;
+import server.util.measurement.MeasurementNotFoundException;
+import server.util.measurement.MeasurementValidator;
+import server.util.sensor.SensorNotFoundException;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

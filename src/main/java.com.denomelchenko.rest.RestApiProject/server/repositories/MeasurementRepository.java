@@ -1,6 +1,6 @@
-package com.denomelchenko.rest.RestApiProject.repositories;
+package server.repositories;
 
-import com.denomelchenko.rest.RestApiProject.models.Measurement;
+import server.models.Measurement;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

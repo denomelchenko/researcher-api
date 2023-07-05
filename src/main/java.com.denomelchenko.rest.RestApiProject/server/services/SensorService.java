@@ -1,8 +1,8 @@
-package com.denomelchenko.rest.RestApiProject.services;
+package server.services;
 
-import com.denomelchenko.rest.RestApiProject.models.Sensor;
-import com.denomelchenko.rest.RestApiProject.repositories.SensorRepository;
-import com.denomelchenko.rest.RestApiProject.util.measurement.MeasurementNotFoundException;
+import server.models.Sensor;
+import server.repositories.SensorRepository;
+import server.util.measurement.MeasurementNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

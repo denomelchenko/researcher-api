@@ -1,6 +1,6 @@
-package com.denomelchenko.rest.RestApiProject.util.measurement;
+package server.util.measurement;
 
-import com.denomelchenko.rest.RestApiProject.models.Measurement;
+import server.models.Measurement;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;

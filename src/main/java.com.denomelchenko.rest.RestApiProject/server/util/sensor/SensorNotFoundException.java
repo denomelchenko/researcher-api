@@ -1,4 +1,4 @@
-package com.denomelchenko.rest.RestApiProject.util.sensor;
+package server.util.sensor;
 
 public class SensorNotFoundException extends RuntimeException {
 }

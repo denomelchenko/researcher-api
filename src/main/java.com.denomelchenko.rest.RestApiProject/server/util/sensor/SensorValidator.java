@@ -1,7 +1,7 @@
-package com.denomelchenko.rest.RestApiProject.util.sensor;
+package server.util.sensor;
 
-import com.denomelchenko.rest.RestApiProject.models.Sensor;
-import com.denomelchenko.rest.RestApiProject.services.SensorService;
+import server.models.Sensor;
+import server.services.SensorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
