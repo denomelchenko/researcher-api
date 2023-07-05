@@ -28,6 +28,10 @@ public class MeasurementService {
         return measurementRepository.findById(id).orElseThrow(SensorNotFoundException::new);
     }
 
+    public int getAllRainingDaysCount() {
+        return measurementRepository.findByRainingTrue().size();
+    }
+
     @Transactional
     public void save(Measurement measurement) {
         measurementRepository.save(measurement);
