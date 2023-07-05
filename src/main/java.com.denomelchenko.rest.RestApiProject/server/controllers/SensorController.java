@@ -43,7 +43,7 @@ public class SensorController {
     }
 
     @GetMapping("/{id}/measurements")
-    public List<MeasurementDTO> getMeasurements(@PathVariable("id") int id) {
+    public List<MeasurementDTO> getMeasurementsById(@PathVariable("id") int id) {
         return sensorService.getOne(id).getMeasurements().stream().map(this::convertToMeasurementDTO).collect(Collectors.toList());
     }
 

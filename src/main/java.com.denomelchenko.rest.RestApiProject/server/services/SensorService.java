@@ -34,6 +34,10 @@ public class SensorService {
     }
 
     public Sensor findByName(String name) {
-        return sensorRepository.findByName(name);
+        Sensor sensor = sensorRepository.findByName(name);
+        if (sensor == null) {
+            throw new SensorNotFoundException();
+        }
+        return sensor;
     }
 }
