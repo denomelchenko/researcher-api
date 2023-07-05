@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import server.util.sensor.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/sensors")
@@ -27,6 +28,16 @@ public class SensorController {
         this.sensorService = sensorService;
         this.modelMapper = modelMapper;
         this.sensorValidator = sensorValidator;
+    }
+
+    @GetMapping
+    public List<SensorDTO> getAll() {
+        return sensorService.getAll().stream().map(this::convertToSensorDTO).collect(Collectors.toList());
+    }
+
+    @GetMapping("/{id}")
+    public SensorDTO getOne(@PathVariable("id") int id) {
+        return convertToSensorDTO(sensorService.getOne(id));
     }
 
     @PostMapping("/registration")

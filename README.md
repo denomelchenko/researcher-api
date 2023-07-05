@@ -16,12 +16,13 @@ Before running the project, ensure that you have the following installed:
 `git clone https://github.com/denomelchenko/rest-api-sensor.git`
 2. Navigate to the project directory: `cd RestApiProject`
 3. Build the project using Maven: `mvn clean install`
-4. Run the application: `mvn spring-boot:run`
+4. Run the application: `mvn spring-boot:ru`
 
 ## API Endpoints
 - **GET /measurements/** - Get all measurements.
 - **POST /sensors/** - Add a new sensor.
 - **POST /measurements/** - Add a new measurement.
+- **GET /sensors/** - Get all sensors.
 - **GET /measurements/rainyDaysCount/** - Get count of rainy days.
 
 

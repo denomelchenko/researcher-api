@@ -6,6 +6,7 @@ import server.util.measurement.MeasurementNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import server.util.sensor.SensorNotFoundException;
 
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class SensorService {
     }
 
     public Sensor getOne(int id) {
-        return sensorRepository.findById(id).orElseThrow(MeasurementNotFoundException::new);
+        return sensorRepository.findById(id).orElseThrow(SensorNotFoundException::new);
     }
 
     @Transactional
