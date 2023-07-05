@@ -20,6 +20,9 @@ Before running the project, ensure that you have the following installed:
 
 ## API Endpoints
 - **GET /measurements/** - Get all measurements.
+- **GET /sensors/{id}** - Get sensor by id.
+- **GET /measurements/{id}** - Get measurement by id.
+- **GET /sensors/{id}/measurements** - Get all measurements for sensor by sensor id.
 - **POST /sensors/** - Add a new sensor.
 - **POST /measurements/** - Add a new measurement.
 - **GET /sensors/** - Get all sensors.

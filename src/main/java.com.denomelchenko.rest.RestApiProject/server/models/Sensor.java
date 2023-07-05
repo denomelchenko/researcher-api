@@ -49,4 +49,12 @@ public class Sensor {
     public void setId(int id) {
         this.id = id;
     }
+
+    public List<Measurement> getMeasurements() {
+        return measurements;
+    }
+
+    public void setMeasurements(List<Measurement> measurements) {
+        this.measurements = measurements;
+    }
 }

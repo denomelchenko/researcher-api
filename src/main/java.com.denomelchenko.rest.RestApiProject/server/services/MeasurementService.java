@@ -2,6 +2,7 @@ package server.services;
 
 import server.models.Measurement;
 import server.repositories.MeasurementRepository;
+import server.util.measurement.MeasurementNotFoundException;
 import server.util.sensor.SensorNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class MeasurementService {
     }
 
     public Measurement getOne(int id) {
-        return measurementRepository.findById(id).orElseThrow(SensorNotFoundException::new);
+        return measurementRepository.findById(id).orElseThrow(MeasurementNotFoundException::new);
     }
 
     public int getAllRainingDaysCount() {

@@ -1,7 +1,9 @@
 package server.controllers;
 
 import org.modelmapper.ModelMapper;
+import server.dto.MeasurementDTO;
 import server.dto.SensorDTO;
+import server.models.Measurement;
 import server.models.Sensor;
 import server.services.SensorService;
 import jakarta.validation.Valid;
@@ -40,6 +42,11 @@ public class SensorController {
         return convertToSensorDTO(sensorService.getOne(id));
     }
 
+    @GetMapping("/{id}/measurements")
+    public List<MeasurementDTO> getMeasurements(@PathVariable("id") int id) {
+        return sensorService.getOne(id).getMeasurements().stream().map(this::convertToMeasurementDTO).collect(Collectors.toList());
+    }
+
     @PostMapping("/registration")
     public ResponseEntity<HttpStatus> register(@RequestBody @Valid SensorDTO sensorDTO, BindingResult bindingResult) {
         Sensor sensor = convertToSensor(sensorDTO);
@@ -54,6 +61,10 @@ public class SensorController {
         }
         sensorService.save(sensor);
         return ResponseEntity.ok(HttpStatus.OK);
+    }
+
+    private MeasurementDTO convertToMeasurementDTO(Measurement measurement) {
+        return modelMapper.map(measurement, MeasurementDTO.class);
     }
 
     private Sensor convertToSensor(SensorDTO sensorDTO) {

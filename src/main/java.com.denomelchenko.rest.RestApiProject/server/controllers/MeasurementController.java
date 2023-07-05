@@ -43,6 +43,11 @@ public class MeasurementController {
         return measurementService.getAll().stream().map(this::convertToMeasurementDTO).collect(Collectors.toList());
     }
 
+    @GetMapping("/{id}")
+    public MeasurementDTO getOne(@PathVariable("id") int id) {
+        return convertToMeasurementDTO(measurementService.getOne(id));
+    }
+
     @GetMapping("/rainyDaysCount")
     public int getRainyDaysCount() {
         return measurementService.getAllRainingDaysCount();
